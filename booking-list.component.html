@@ -1,0 +1,33 @@
+<p>booking-list works!</p>
+
+<h2>Booking List</h2>
+<table class ="table table-striped">
+    <thead>
+    <tr>
+        <th>Passenger Name </th>
+        <th>Destination</th>
+        <th>Total Seats</th>
+        <th>Seat No</th>
+        <th>Booked Date</th>
+        <th>Payment Status</th>
+        <th>Actions</th>
+    </tr>
+</thead> 
+<tbody>
+    <tr *ngFor ="let booking of bookings" >
+        <td>{{booking.pname}}</td>
+        <td>{{booking.destination}}</td>
+        <td>{{booking.totalseats}}</td>
+        <td>{{booking.seatno}}</td>
+        <td>{{booking.bdate}}</td>
+        <td>{{booking.payment_statusrol}}</td>
+        <td>
+            <button (click) ="updateBooking(booking.id)" class="btn btn-info"> Update</button>
+            <button (click) ="deleteBooking(booking.id)" class="btn btn-danger" style="margin: left 10px"> Delete</button>
+            
+        
+        </td>
+    </tr>
+</tbody>
+</table>
+
